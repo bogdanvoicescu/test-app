@@ -15,13 +15,8 @@ export const AuthProvider = ({ children }) => {
     );
   };
 
-  const logout = (credentials) => {
-    console.log("logout in with", credentials);
-    setUser({ email: credentials.email, role: credentials.role });
-  };
-
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login }}>
       {children}
     </AuthContext.Provider>
   );

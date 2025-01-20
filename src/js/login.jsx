@@ -4,7 +4,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("tester");
-  const { user, login, logout } = useAuth();
+  const { user, login } = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
